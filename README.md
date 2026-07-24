@@ -1,5 +1,7 @@
 # 🏦 Smart Lender — AI-Powered Loan Approval Prediction System
 
+🔗 **[Live Demo](https://smart-lender-v7wz.onrender.com)** *(may take 30-60 sec to load if idle)*
+
 An end-to-end machine learning web application that predicts whether a loan application is likely to be **approved or rejected**, based on applicant details such as income, credit history, education, and property area. Built with **Python, scikit-learn, XGBoost, and Flask**.
 
 ---
