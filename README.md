@@ -22,6 +22,9 @@ Manual loan approval processes are slow and inconsistent. This project uses hist
 **1. Exploratory Data Analysis (EDA)**
 Analyzed loan status distribution across gender, marital status, education, income, and property area to understand key patterns in the dataset.
 
+<img width="540" height="393" alt="loan_status_dist" src="https://github.com/user-attachments/assets/5c73cc7f-5bbd-4aff-958e-06c00f9eab95" />
+
+
 **2. Data Preprocessing**
 - Handled missing values (mode imputation for categorical, mean for numerical)
 - Removed outliers from `ApplicantIncome` and `LoanAmount` using the IQR method
@@ -46,6 +49,9 @@ While Random Forest showed marginally higher raw test accuracy, **XGBoost was se
 
 **5. Model Evaluation**
 Evaluated the final XGBoost model using a confusion matrix and full classification report (precision, recall, F1-score) rather than accuracy alone, to properly account for class imbalance.
+
+<img width="435" height="393" alt="confusion_matrix" src="https://github.com/user-attachments/assets/af18d56e-96c3-4f95-8854-dacea2818537" />
+
 
 **6. Feature Importance**
 Analyzed which features most influenced predictions. **Credit History** emerged as by far the most dominant factor, followed by **Property Area** — consistent with real-world lending practices where repayment history is the primary risk signal.
@@ -115,6 +121,9 @@ smart-lender-loan-prediction/
 ## 🔑 Key Insight
 
 The model's decisions are driven overwhelmingly by **Credit History** — applicants with a good repayment history are approved with high confidence regardless of minor variations in other fields, while a poor credit history strongly pushes the model toward rejection. This mirrors how real financial institutions assess risk.
+
+<img width="695" height="393" alt="property_area" src="https://github.com/user-attachments/assets/76ea6262-6d29-4cad-848f-9d239d753e20" />
+
 
 ---
 
