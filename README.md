@@ -131,10 +131,10 @@ The model's decisions are driven overwhelmingly by **Credit History** — applic
 
 ## 📈 Future Improvements
 
-- Deploy live on Render/Railway for public access
 - Add SHAP-based explainability per prediction (why *this specific* application was approved/rejected)
 - Expand dataset for better generalization
 - Add authentication for a lender-facing dashboard
+- Add input validation on the frontend form
 
 ---
 
