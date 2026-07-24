@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Lender - Loan Approval Prediction System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f6f8;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            width: 650px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #2e7d32;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        .body {
+            padding: 35px;
+            text-align: center;
+        }
+
+        .body p {
+            color: #444;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            background: #2e7d32;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #256428;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>🏦 Loan Approval Prediction System</h1>
+        </div>
+        <div class="body">
+            <p>This application predicts whether a loan application is likely to be approved
+                based on applicant details such as income, education, loan amount,
+                credit history and property area.</p>
+            <form action="/predict" method="GET">
+                <button type="submit">Predict Loan Approval</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

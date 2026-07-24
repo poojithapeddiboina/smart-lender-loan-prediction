@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            width: 420px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 10px 0;
+        }
+
+        .approved {
+            color: #2e7d32;
+        }
+
+        .rejected {
+            color: #c62828;
+        }
+
+        .confidence-label {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .bar-bg {
+            background: #eee;
+            border-radius: 20px;
+            height: 18px;
+            width: 100%;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        {% if result == "Approved" %}
+        <div class="icon">✅</div>
+        <h1 class="approved">Loan Approved</h1>
+        {% else %}
+        <div class="icon">❌</div>
+        <h1 class="rejected">Loan Rejected</h1>
+        {% endif %}
+
+        <div class="confidence-label">Model Confidence: {{ confidence }}%</div>
+        <div class="bar-bg">
+            <div class="bar-fill" style="width: {{ confidence }}%;"></div>
+        </div>
+
+        <a href="/">Try Another Prediction</a>
+    </div>
+</body>
+
+</html>

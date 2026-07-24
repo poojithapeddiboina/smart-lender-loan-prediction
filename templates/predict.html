@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Lender - Loan Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 0;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            width: 600px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #444;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        button {
+            grid-column: span 2;
+            margin-top: 10px;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>🏦 Smart Lender</h1>
+        <p class="subtitle">AI-Powered Loan Approval Prediction</p>
+        <form action="/submit" method="POST">
+
+            <div>
+                <label>Gender</label>
+                <select name="Gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Married</label>
+                <select name="Married" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Dependents</label>
+                <select name="Dependents" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3+">3+</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Education</label>
+                <select name="Education" required>
+                    <option value="Graduate">Graduate</option>
+                    <option value="Not Graduate">Not Graduate</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Self Employed</label>
+                <select name="Self_Employed" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Property Area</label>
+                <select name="Property_Area" required>
+                    <option value="Urban">Urban</option>
+                    <option value="Semiurban">Semiurban</option>
+                    <option value="Rural">Rural</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Applicant Income</label>
+                <input type="number" step="any" name="ApplicantIncome" required>
+            </div>
+
+            <div>
+                <label>Coapplicant Income</label>
+                <input type="number" step="any" name="CoapplicantIncome" required>
+            </div>
+
+            <div>
+                <label>Loan Amount (in thousands)</label>
+                <input type="number" step="any" name="LoanAmount" required>
+            </div>
+
+            <div>
+                <label>Loan Term (in days)</label>
+                <input type="number" step="any" name="Loan_Amount_Term" required>
+            </div>
+
+            <div class="full-width">
+                <label>Credit History</label>
+                <select name="Credit_History" required>
+                    <option value="1.0">Good (1)</option>
+                    <option value="0.0">Bad (0)</option>
+                </select>
+            </div>
+
+            <button type="submit">Predict Loan Status</button>
+        </form>
+    </div>
+</body>
+
+</html>
